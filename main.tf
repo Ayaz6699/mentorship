@@ -30,6 +30,7 @@ resource "aws_subnet" "public" {
     Name = "public ${count.index}"
   }
 }
+
 resource "aws_subnet" "private" {
     count = 2
   vpc_id     = aws_vpc.main.id
