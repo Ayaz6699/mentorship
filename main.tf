@@ -22,6 +22,7 @@ locals {
 
 resource "aws_subnet" "public" {
     count = 2
+    
   vpc_id     = aws_vpc.main.id
   cidr_block = local.public_cidr[count.index]
 
